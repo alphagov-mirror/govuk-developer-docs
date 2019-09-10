@@ -167,11 +167,7 @@ These machines are safe to reboot during the day. During the night they
 are involved in a data sync processes and rebooting could cause the data
 sync to fail.
 
-## Rebooting backend-lb machines (Carrenza only)
-
-> **Note**
->
-> These machines don't exist in AWS environments.
+## Rebooting backend-lb machines
 
 NAT rule points directly at backend-lb-1 for backend services. In order
 to safely reboot these machines you'll need access to vCloud Director.
@@ -207,11 +203,7 @@ to safely reboot these machines you'll need access to vCloud Director.
 -   Use vCloud Director to update the NAT rule to point back to the IP
     address of backend-lb-1
 
-## Rebooting MySQL backup machines (Carrenza only)
-
-> **Note**
->
-> These machines are managed by Amazon in AWS and do not require manual intervention.
+## Rebooting MySQL backup machines
 
 The MySQL backup machines [create a file during the backup
 process](https://github.com/alphagov/govuk-puppet/commit/0e1615bf31f714994b43142ecf915330d4d46af5).
@@ -226,11 +218,7 @@ If that file exists, the machine isn't safe to reboot.
 
         fab <environment> -H mysql-backup-1.backend vm.reboot
 
-## Rebooting MySQL master and slave machines (Carrenza only)
-
-> **Note**
->
-> These machines are managed by Amazon in AWS and do not require manual intervention.
+## Rebooting MySQL master and slave machines
 
 Unless there are urgent updates to apply, these machines should not be
 rebooted during working hours in production. Applications write to the
@@ -250,11 +238,7 @@ by On Call staff.
 They may be rebooted in working hours in the staging environment, however you
 should notify colleagues before doing so.
 
-## Rebooting PostgreSQL primary and standby machines (Carrenza only)
-
-> **Note**
->
-> These machines are managed by Amazon in AWS and do not require manual intervention.
+## Rebooting PostgreSQL primary and standby machines
 
 Unless there are urgent updates to apply, these machines should not be
 rebooted in production during working hours. Applications read and write
