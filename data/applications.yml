@@ -3,6 +3,7 @@
 - github_repo_name: collections-publisher
   type: Publishing apps
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-pub-workflow"
   production_hosted_on: carrenza
   dependencies:
     publishing-api:
@@ -32,6 +33,7 @@
 - github_repo_name: content-tagger
   type: Publishing apps
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-platform-health"
   production_hosted_on: carrenza
   dependencies:
     publishing-api:
@@ -53,6 +55,7 @@
 - github_repo_name: content-publisher
   type: Publishing apps
   team: "#govuk-pub-workflow"
+  dependencies_team: "#govuk-pub-workflow"
   production_hosted_on: carrenza
   dependencies:
     content-publisher:
@@ -81,6 +84,7 @@
 - github_repo_name: manuals-publisher
   type: Publishing apps
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-searchandnav"
   production_hosted_on: carrenza
   dependencies:
     router:
@@ -138,6 +142,7 @@
 - github_repo_name: service-manual-publisher
   type: Publishing apps
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-searchandnav"
   production_hosted_on: carrenza
   dependencies:
     service-manual-frontend:
@@ -153,10 +158,12 @@
 - github_repo_name: short-url-manager
   type: Publishing apps
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-searchandnav"
   production_hosted_on: carrenza
 - github_repo_name: specialist-publisher
   type: Publishing apps
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-searchandnav"
   production_hosted_on: carrenza
   dependencies:
     support:
@@ -194,6 +201,7 @@
   type: Publishing apps
   production_url: https://whitehall-admin.publishing.service.gov.uk
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-pub-workflow"
   api_docs_url: "/apis/whitehall.html"
   production_hosted_on: carrenza
   dependencies:
@@ -232,6 +240,7 @@
 - github_repo_name: content-store
   type: APIs
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-pub-workflow"
   api_docs_url: "/apis/content-store.html"
   production_hosted_on: aws
   dependencies:
@@ -267,6 +276,7 @@
 - github_repo_name: publishing-api
   type: APIs
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-pub-workflow"
   api_docs_url: "/apis/publishing-api.html"
   production_hosted_on: aws
   dependencies:
@@ -287,6 +297,7 @@
 - github_repo_name: asset-manager
   type: APIs
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-pub-workflow"
   production_hosted_on: carrenza
   dependencies:
     signon:
@@ -296,6 +307,7 @@
 - github_repo_name: router-api
   type: APIs
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-searchandnav"
   production_hosted_on: aws
   dependencies: {}
 - github_repo_name: support-api
@@ -329,6 +341,7 @@
 - github_repo_name: mapit
   type: APIs
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-platform-health"
   api_docs_url: https://mapit.mysociety.org/docs/
   production_hosted_on: aws
   dependencies: {}
@@ -376,6 +389,7 @@
 - github_repo_name: search-admin
   type: Supporting apps
   team: "#govuk-searchandnav"
+  dependencies_team: "#govuk-searchandnav"
   production_hosted_on: carrenza
 - github_repo_name: signon
   type: Supporting apps
@@ -398,6 +412,7 @@
 - github_repo_name: authenticating-proxy
   type: Supporting apps
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-pub-workflow"
   production_hosted_on: aws
 - github_repo_name: release
   type: Supporting apps
@@ -406,6 +421,7 @@
 - github_repo_name: router
   type: Supporting apps
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-platform-health"
   production_hosted_on: aws
   dependencies: {}
 
@@ -487,6 +503,7 @@
 - github_repo_name: frontend
   type: Frontend apps
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-searchandnav"
   production_hosted_on: aws
   dependencies:
     search-api:
@@ -506,6 +523,7 @@
 - github_repo_name: government-frontend
   type: Frontend apps
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-searchandnav"
   component_guide_url: https://government-frontend.herokuapp.com/component-guide
   production_hosted_on: aws
   dependencies:
@@ -516,6 +534,7 @@
 - github_repo_name: info-frontend
   type: Frontend apps
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-searchandnav"
   production_hosted_on: aws
   dependencies:
     static:
@@ -524,6 +543,7 @@
   type: Frontend apps
   puppet_name: licencefinder
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-searchandnav"
   production_hosted_on: aws
   dependencies:
     content-store:
@@ -535,6 +555,7 @@
 - github_repo_name: manuals-frontend
   type: Frontend apps
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-searchandnav"
   production_hosted_on: aws
   dependencies:
     content-store:
@@ -559,6 +580,7 @@
       description: ''
 - github_repo_name: service-manual-frontend
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-searchandnav"
   type: Frontend apps
   production_hosted_on: aws
   dependencies:
@@ -569,6 +591,7 @@
 - github_repo_name: static
   type: Frontend apps
   team: "#govuk-platform-health"
+  dependencies_team: "#govuk-searchandnav"
   production_hosted_on: aws
   dependencies:
     static:
@@ -640,6 +663,7 @@
   type: Licensing apps
   production_hosted_on: aws
   team: "#govuk-licensing"
+  dependencies_team: "#govuk-licensing"
   sentry_url: false
   deploy_url: false
   dashboard_url: false
