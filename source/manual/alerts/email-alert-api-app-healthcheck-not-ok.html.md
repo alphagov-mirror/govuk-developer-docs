@@ -163,12 +163,6 @@ problem down the line which is preventing jobs from being processed. It may
 also imply the threshold is too low if a large number of emails have been sent
 out due to a content change.
 
-### Status updates (status_update)
-
-This means that we haven’t received status updates from Notify on some emails
-and it’s been 72 hours since the emails were sent out. This could mean there is
-a problem with our system, or there could be a problem with Notify.
-
 ### Subscription contents without emails (subscription_content)
 
 This means that there are subscription contents being created without emails
