@@ -87,13 +87,6 @@ indicate a problem down the line which is preventing workers from being
 processed. It may also imply the threshold is too low if a large number of
 emails have being sent out due to a content change.
 
-### High queue latency (queue_latency)
-
-This means the time it takes for a job to be processed is unusually high. This
-may indicate a problem down the line which is preventing workers from being
-processed. It may also imply the threshold is too low if a large number of
-emails have being sent out due to a content change.
-
 ### High retry queue size (retry_size)
 
 This means there are a high number of items in the retry queue. The Email Alert
