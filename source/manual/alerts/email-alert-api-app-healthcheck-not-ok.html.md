@@ -87,15 +87,6 @@ may indicate a problem down the line which is preventing workers from being
 processed. It may also imply the threshold is too low if a large number of
 emails have being sent out due to a content change.
 
-### High retry queue size (retry_size)
-
-This means there are a high number of items in the retry queue. The Email Alert
-API relies on the retry queue for rate limiting, so it’s not unusual to see
-items in the queue, but if it is very high it suggests that there may be a
-problem down the line which is preventing jobs from being processed. It may
-also imply the threshold is too low if a large number of emails have been sent
-out due to a content change.
-
 [dashboard]: https://grafana.staging.govuk.digital/dashboard/file/email_alert_api.json?refresh=10s&orgId=1
 [google-group]: https://groups.google.com/a/digital.cabinet-office.gov.uk/forum/#!forum/govuk-email-courtesy-copies
 [password-store]: https://github.com/alphagov/govuk-secrets/tree/master/pass/2ndline/govuk-notify
