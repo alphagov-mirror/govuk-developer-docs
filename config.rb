@@ -23,6 +23,7 @@ set :url_root, config[:tech_docs][:host]
 activate :search_engine_sitemap,
          default_change_frequency: "weekly"
 
+# rubocop:disable Metrics/BlockLength
 helpers do
   def dashboard
     Dashboard.new
@@ -30,6 +31,10 @@ helpers do
 
   def publishing_api_pages
     PublishingApiDocs.pages.sort_by(&:title)
+  end
+
+  def email_alert_api_pages
+    EmailAlertApiDocs.pages.sort_by(&:title)
   end
 
   def active_app_pages
@@ -56,6 +61,7 @@ helpers do
     (defined?(locals) && locals[:title]) || [current_page.data.title, current_page.data.section].compact.join(" - ")
   end
 end
+# rubocop:enable Metrics/BlockLength
 
 ignore "templates/*"
 
