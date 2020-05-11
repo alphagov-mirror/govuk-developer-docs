@@ -1,8 +1,4 @@
-on:
-  pull_request:
-  push:
-    branches:
-      - master
+on: [push, pull_request]
 
 jobs:
   test:
@@ -31,4 +27,3 @@ jobs:
       - run: bundle exec rake
         env:
           GOVUK_CONTENT_SCHEMAS_PATH: tmp/govuk-content-schemas
-      - run: bundle exec rubocop
