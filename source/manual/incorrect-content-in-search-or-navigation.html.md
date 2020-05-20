@@ -63,6 +63,7 @@ reindexing via a rake task in the publishing app.
 
 Try republishing the content.
 
-#### Unpublished content is still showing up in search
+#### Unpublished or outdated content is still showing up in search
 
-Unpublished content can be removed from search manually using [search admin](https://search-admin.publishing.service.gov.uk/).
+Unpublished or otherwise outdated content can be removed from search manually
+using [search admin](https://search-admin.publishing.service.gov.uk/).
