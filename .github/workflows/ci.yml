@@ -20,3 +20,6 @@ jobs:
       - run: bundle exec rake
         env:
           GOVUK_CONTENT_SCHEMAS_PATH: tmp/govuk-content-schemas
+      - run: bundle exec middleman build --verbose
+        env:
+          NO_CONTRACTS: true
