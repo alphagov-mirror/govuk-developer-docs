@@ -26,7 +26,7 @@ RSpec.describe RunRakeTask do
 
     describe "given an application name" do
       before do
-        stub_request(:get, "https://raw.githubusercontent.com/alphagov/govuk-puppet/master/hieradata/common.yaml")
+        stub_request(:get, "https://raw.githubusercontent.com/alphagov/govuk-puppet/master/hieradata_aws/common.yaml")
           .to_return(body: File.read("spec/fixtures/puppet-hieradata-common.yaml"))
       end
 
