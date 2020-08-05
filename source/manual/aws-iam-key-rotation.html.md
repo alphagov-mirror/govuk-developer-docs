@@ -109,6 +109,19 @@ you can safely [remove the key](#6-remove-the-old-key).
   - Either wait up to 30 minutes for this to take effect or run
   `govuk_puppet --verbose` in the machine that uses that key.
 
+#### Rotating SES SMTP credentials
+
+The SMTP credentials for SES are connected to a user in IAM, but they are
+separate to the security credentials. As of August 2020, to rotate SMTP
+credentials, the user needs to be re-created and they will be displayed when
+the user is created and never again.
+
+See [this PR][smtp-rotation-pr] for an example and the relevant [AWS documentation
+on obtaining SES credentials][aws-ses-credentials].
+
+[smtp-rotation-pr]: https://github.com/alphagov/govuk-secrets/pull/1032
+[aws-ses-credentials]: https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html
+
 ### 5. Ensure new key is being used
 
 Ensure that the `Last used` values change to show that the new key is being
