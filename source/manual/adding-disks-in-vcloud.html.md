@@ -88,7 +88,7 @@ See an [example](https://github.com/alphagov/govuk-provisioning/pull/17/files).
    already present.
 2. Run the following loop as root to probe for new discs
 
-```bash
+``bash
 echo '- - -' | sudo tee -a /sys/class/scsi_host/*/scan
 ```
 
