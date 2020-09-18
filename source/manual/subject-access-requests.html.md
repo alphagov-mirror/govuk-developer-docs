@@ -4,8 +4,6 @@ title: Subject Access Requests
 parent: "/manual.html"
 layout: manual_layout
 section: 2nd line
-last_reviewed_on: 2020-09-18
-review_in: 6 months
 related_applications: [email-alert-api]
 ---
 
