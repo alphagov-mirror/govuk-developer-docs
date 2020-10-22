@@ -4,7 +4,7 @@ title: Set up a new Rails application
 section: Applications
 layout: manual_layout
 parent: "/manual.html"
-last_reviewed_on: 2020-09-15
+last_reviewed_on: 2020-10-22
 review_in: 6 months
 ---
 
@@ -29,13 +29,13 @@ applications](/manual/conventions-for-rails-applications.html) and
 
 To create a rails app, run the following (skip uncommon stuff).
 
-```
+```sh
 rails new myapp --skip-javascript --skip-test --skip-bundle --skip-spring --skip-action-cable --skip-action-mailer --skip-active-storage
 ```
 
 Replace the Gemfile with the gems you need. Here is an example.
 
-```
+```rb
 source "https://rubygems.org"
 
 gem "rails", "6.0.3.4"
@@ -67,10 +67,11 @@ end
 
 Run `bundle && rails g rspec:install` and replace `spec/*helper.rb`.
 
-```
-## spec/rails_helper.rb
+```sh
 rm spec/rails_helper.rb
+```
 
+```rb
 ## spec/spec_helper.rb
 ENV["RAILS_ENV"] ||= "test"
 
@@ -92,7 +93,7 @@ end
 
 In config, replace the content of `database.yml` with the following.
 
-```
+```yaml
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -117,7 +118,7 @@ production:
 
 In config, replace `credentials.yml.env` and `master.key` with `secrets.yml`.
 
-```
+```yaml
 development:
   secret_key_base: secret
 
@@ -130,23 +131,15 @@ production:
 
 In config, replace the content of `routes.rb` with the following healthcheck.
 
-```
+```rb
 Rails.application.routes.draw do
-  get "/healthcheck", to: proc { [200, {}, ["OK"]] }
+  get "/healthcheck", to: GovukHealthcheck.rack_response
 end
 ```
 
-Now is a good time to run `bin/setup`. Lastly, create `lib/tasks/lint.rake` with this.
-
-```
-desc "Lint files"
-task "lint" do
-  sh "rubocop --format clang"
-  sh "scss-lint app/assets/stylesheets"
-end
-```
-
-Then add `task default: %i(spec lint)` in Rakefile and finally run `rake`.
+Now is a good time to run `bin/setup`. Lastly, to ensure your application has
+beautiful consistent code, you should finish up by
+[configuring linting](/manual/configure-linting.html) for it.
 
 ## Add a software licence
 
@@ -183,7 +176,7 @@ We have a common structure that is used for GOV.UK apps. Fill in some basic
 details to get started with your app and flesh it out further as your project
 develops.
 
-```
+```markdown
 # App Name
 
 One paragraph description and purpose.
