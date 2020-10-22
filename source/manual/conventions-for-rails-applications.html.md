@@ -65,9 +65,7 @@ Ruby / Rails applications:
 - [plek][] - Utility tool to access determine base URLs for GOV.UK applications
   for the current environment
 - [rubocop-govuk][] - Provides GOV.UK linting rules for Ruby, Rails, RSpec and
-  Rake
-- [scss-lint-govuk][] - Provides linting for SCSS files according to GDS
-  conventions
+  Rake (we have further documentation on [configuring linting][configure-linting])
 - [slimmer][] - Provides consistent templating for apps that serve content on
   the www.gov.uk host
 
@@ -89,7 +87,7 @@ introduced by these gems.
 [govuk_test]: https://github.com/alphagov/govuk_test
 [plek]: https://github.com/alphagov/plek
 [rubocop-govuk]: https://github.com/alphagov/rubocop-govuk
-[scss-lint-govuk]: https://github.com/alphagov/scss-lint-govuk
+[configure-linting]: /manual/configure-linting.html
 [slimmer]: https://github.com/alphagov/slimmer
 [issue-example]: https://github.com/alphagov/govuk_app_config/issues/121
 
