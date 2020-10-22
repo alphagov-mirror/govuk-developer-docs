@@ -1,8 +1,10 @@
+require "git"
+
 module CommitHelpers
   def commit_url(current_page)
     return "https://github.com/alphagov/#{current_page.data.app_name}/commit/#{current_page.data.latest_commit[:sha]}" if current_page.data.latest_commit
 
-    commit_sha = `git log -1 --format=oneline #{source_file(current_page)} | cut -d ' ' -f 1`.strip
+    commit_sha = Git.open(".").log.path(source_file(current_page)).first.sha
     "https://github.com/alphagov/govuk-developer-docs/commit/#{commit_sha}"
   end
 
