@@ -242,6 +242,22 @@ After your PR has been merged, someone from the `govuk-administrators`
 or `govuk-internal-administrators` group needs to deploy the
 `infra-security` project.
 
+#### New access controls
+
+As part of removing the RE out-of-hours rota, the Replatforming has carried out work
+to enable anyone with production access (i.e. anyone in any of the admin or poweruser groups)
+to assume `admin`, `poweruser` or `user` roles in any of our AWS accounts:
+
+By allowing an admin to assume roles other than admin, we allow people to assume
+a role of least privilege for the work that they need to do. Similarly, allowing
+powerusers to assume an admin role allows them to address issues that would have
+previously been dealt with by an admin, such as those relating to AWS IAM.
+
+All you need to do to assume one of the specified roles is specify a role as you
+normally would. For example, if you want to assume a `poweruser` role in `integration`,
+the role you would specify is `govuk-integration-poweruser`, either directly through
+the AWS Console or via the GDS CLI. 
+
 ## 8. Use your AWS access
 
 ### First run
