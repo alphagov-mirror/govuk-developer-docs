@@ -256,7 +256,7 @@ previously been dealt with by an admin, such as those relating to AWS IAM.
 All you need to do to assume one of the specified roles is specify a role as you
 normally would. For example, if you want to assume a `poweruser` role in `integration`,
 the role you would specify is `govuk-integration-poweruser`, either directly through
-the AWS Console or via the GDS CLI. 
+the AWS Console or via the GDS CLI.
 
 ## 8. Use your AWS access
 
