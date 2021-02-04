@@ -13,7 +13,7 @@ parent: "/manual.html"
 Permission to Google Cloud Platform (GCP) is managed through the [GOV.UK GCP
 access Google Group](https://groups.google.com/a/digital.cabinet-office.gov.uk/g/govuk-gcp-access).
 
-Access to GCP is granted when [permanent Production access](manual/rules-for-getting-production-access.html) is
+Access to GCP is granted when [permanent Production access](/manual/rules-for-getting-production-access.html) is
 approved and merged to [GOV.UK user reviewer](https://github.com/alphagov/govuk-user-reviewer) repository.
 
 If you should have access but don't, the 2nd line team should be able to add
@@ -21,4 +21,3 @@ you to the Google Group.
 
 You can login to the GCP console at [https://console.cloud.google.com/](https://console.cloud.google.com/) using
 your `@digital.cabinet-office.gov.uk` email address.
-
