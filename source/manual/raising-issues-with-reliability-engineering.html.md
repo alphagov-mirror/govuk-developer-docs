@@ -24,22 +24,6 @@ indicate in your message that a problem is time critical.
 
 Failing slack communication you can also walk over to the RE GOV.UK team desks and talk to the interruptible person directly - they are currently on the 6th floor near bank 27-28.
 
-It is also possible to "Run a Play" in the context of an ongoing incident page in PagerDuty. This will automatically call the RE engineer on duty both in- and out-of-hours.
-
-## If you need to handover a long-standing incident
-
-If this is in-hours:
-A Site Reliabilty Engineer from the RE GOV.UK team should take over the incident lead role.
-A 2nd line GOV.UK engineer will continue the comms lead role.
-
-If this is out-of-hours:
-The primary GOV.UK engineer should be the incident lead and support the RE GOV.UK out of hours engineer to fix the problem. The secondary GOV.UK engineer should be the comms lead.
-
-To escalate an incident to the RE GOV.UK engineer via PagerDuty:
-
-1. Click on the incident in PagerDuty
-2. Click on ‘Run a play’ to select ‘call the RE GOV.UK on-call person’
-
 ## If a problem is not urgent
 
 You can use the #reliability-eng slack channel for advice. If the issue you've
