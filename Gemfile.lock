@@ -111,12 +111,12 @@ GEM
       rchardet (~> 1.8)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    govuk_app_config (2.8.4)
+    govuk_app_config (2.10.0)
       logstasher (>= 1.2.2, < 2.2.0)
       sentry-raven (~> 3.1.1)
       statsd-ruby (~> 1.5.0)
       unicorn (>= 5.4, < 5.9)
-    govuk_publishing_components (24.1.0)
+    govuk_publishing_components (24.8.0)
       govuk_app_config
       kramdown
       plek
@@ -236,10 +236,12 @@ GEM
     middleman-syntax (3.0.0)
       middleman-core (>= 3.2)
       rouge (~> 2.0)
-    mimemagic (0.3.5)
-    mini_mime (1.0.2)
+    mimemagic (0.3.10)
+      nokogiri (~> 1)
+      rake
+    mini_mime (1.0.3)
     mini_portile2 (2.5.0)
-    minitest (5.14.3)
+    minitest (5.14.4)
     mixlib-cli (2.1.8)
     mixlib-config (3.0.9)
       tomlrb
@@ -247,13 +249,13 @@ GEM
       chef-utils
     multi_json (1.15.0)
     multipart-post (2.1.1)
-    nio4r (2.5.5)
-    nokogiri (1.11.1)
+    nio4r (2.5.7)
+    nokogiri (1.11.2)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
-    nokogiri (1.11.1-x86_64-darwin)
+    nokogiri (1.11.2-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.11.1-x86_64-linux)
+    nokogiri (1.11.2-x86_64-linux)
       racc (~> 1.4)
     octokit (4.20.0)
       faraday (>= 0.9)
@@ -365,7 +367,7 @@ GEM
     sawyer (0.8.2)
       addressable (>= 2.3.5)
       faraday (> 0.8, < 2.0)
-    sentry-raven (3.1.1)
+    sentry-raven (3.1.2)
       faraday (>= 1.0)
     servolux (0.13.0)
     simplecov (0.21.2)
@@ -417,7 +419,7 @@ DEPENDENCIES
   faraday_middleware
   ffi
   git
-  govuk_publishing_components (~> 24.1)
+  govuk_publishing_components (~> 24.8)
   govuk_schemas
   govuk_tech_docs
   html-pipeline
