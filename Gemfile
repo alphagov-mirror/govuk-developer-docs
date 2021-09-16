@@ -5,7 +5,7 @@ gem "capybara"
 gem "ffi"
 gem "rake"
 gem "rspec"
-gem "rubocop-govuk", "4.0.0.pre.1", require: false # Trialling pre-release
+gem "rubocop-govuk", "4.1.0", require: false # Trialling pre-release
 gem "simplecov"
 gem "webmock"
 
